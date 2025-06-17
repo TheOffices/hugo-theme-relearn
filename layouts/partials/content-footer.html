@@ -19,7 +19,7 @@
   {{- with and (not site.Params.hideAuthorEmail) .Params.LastModifierEmail }}
     {{- $LastModifierEmail = . }}
   {{- end }}
-  {{- with and (not site.Params.hideAuthorDate) .Date }}
+  {{- with and (not site.Params.hideAuthorDate) .Params.Date }}
     {{- $Date = . | time.Format $dateFormat }}
   {{- end }}
 {{- end }}
@@ -34,3 +34,21 @@
   "taxonomy" "categories"
   "icon" "layer-group"
 ) }}
+
+
+<footer>
+  <hr>
+  <p>All Contents &copy; {{ now.Format "2006" }} Quillan Dietrich Paige. All rights reserved.</p>
+{{- partial "shortcodes/button.html" (dict
+    "page" .
+    "href" "https://patreon.com/QuillanDeitrichPaige"
+    "style" "grey"
+    "icon" "fa-brands fa-patreon"
+    "content" "Patreon"
+) }}
+  <p>
+    <a href="/legal/copyrights">Copyrights</a> -
+    <!-- <a href="/contact/licensing">Licensing</a> - -->
+    <a href="/legal/sitemap">Sitemap</a>
+  </p>
+</footer>

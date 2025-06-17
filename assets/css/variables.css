@@ -108,6 +108,7 @@
     --INTERNAL-MENU-SECTION-SEPARATOR-color: var(--MENU-SECTION-SEPARATOR-color, var(--MENU-SECTION-HR-color, var(--INTERNAL-MENU-SECTIONS-LINK-color)));
 
     --INTERNAL-BOX-CAPTION-color: var(--BOX-CAPTION-color, rgba( 255, 255, 255, 1 ));
+    --INTERNAL-BOX-CAPTION-ALT-color: var(--BOX-CAPTION-ALT-color, rgba( 255, 255, 255, 1 ));
     --INTERNAL-BOX-BG-color: var(--BOX-BG-color, rgba( 255, 255, 255, .833 ));
     --INTERNAL-BOX-TEXT-color: var(--BOX-TEXT-color, var(--INTERNAL-MAIN-TEXT-color));
 
@@ -117,6 +118,7 @@
     --INTERNAL-BOX-GREY-color: var(--BOX-GREY-color, rgba( 160, 160, 160, 1 ));
     --INTERNAL-BOX-MAGENTA-color: var(--BOX-MAGENTA-color, rgba( 229, 50, 210, 1 ));
     --INTERNAL-BOX-ORANGE-color: var(--BOX-ORANGE-color, rgba( 237, 153, 9, 1 ));
+    --INTERNAL-BOX-YELLOW-color: var(--BOX-YELLOW-color, rgba( 237, 153, 9, 1 ));
     --INTERNAL-BOX-RED-color: var(--BOX-RED-color, rgba( 224, 62, 62, 1 ));
 
     --INTERNAL-BOX-CAUTION-color: var(--BOX-CAUTION-color, var(--INTERNAL-BOX-MAGENTA-color));
@@ -133,6 +135,7 @@
     --INTERNAL-BOX-GREY-TEXT-color: var(--BOX-GREY-TEXT-color, var(--INTERNAL-BOX-TEXT-color));
     --INTERNAL-BOX-MAGENTA-TEXT-color: var(--BOX-MAGENTA-TEXT-color, var(--INTERNAL-BOX-TEXT-color));
     --INTERNAL-BOX-ORANGE-TEXT-color: var(--BOX-ORANGE-TEXT-color, var(--INTERNAL-BOX-TEXT-color));
+    --INTERNAL-BOX-YELLOW-TEXT-color: var(--BOX-YELLOW-TEXT-color, var(--INTERNAL-BOX-TEXT-color));
     --INTERNAL-BOX-RED-TEXT-color: var(--BOX-RED-TEXT-color, var(--INTERNAL-BOX-TEXT-color));
 
     --INTERNAL-BOX-CAUTION-TEXT-color: var(--BOX-CAUTION-TEXT-color, var(--INTERNAL-BOX-MAGENTA-TEXT-color));

@@ -96,7 +96,13 @@
     {{- $entries = partialCached "_relearn/pages.gotmpl" (dict "page" .) .Path }}
   {{- end }}
   {{- with and $entries $title }}
-          <div class="nav-title padding">{{ . }}</div>
+    {{- if $config.titleLink }}
+          <a href="/{{ $config.identifier }}">
+    {{- end }}
+            <div class="nav-title padding">{{ . }}</div>
+    {{- if $config.titleLink }}
+          </a>
+    {{- end }}
   {{- end }}
   {{- $classes := "space " }}
   {{- if ($config.main | default true) }}
@@ -254,7 +260,13 @@
     {{- end }}
   {{- end }}
   {{- with and $entries $title }}
-          <div class="nav-title padding">{{ . }}</div>
+    {{- if $config.titleLink }}
+          <a href="/{{ $config.identifier }}">
+    {{- end }}
+            <div class="nav-title padding">{{ . }}</div>
+    {{- if $config.titleLink }}
+          </a>
+    {{- end }}
   {{- end }}
   {{- $classes := "space " }}
   {{- if ($config.main | default false) }}

@@ -1,0 +1,147 @@
+
+/* RED ITALICS */
+.qr-italic,
+strong > em:only-child,
+.box.expand.cstyle.transparent > .box-label:has(strong > em:only-child) {
+  color: rgb(157,  47,  35);
+  filter: brightness(1.4);
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* GREEN UNDERLINE */
+.qr-under,
+strong > span[style="text-decoration: underline;"]:only-child,
+.box.expand.cstyle.transparent > .box-label:has(
+    strong > span[style="text-decoration: underline;"]:only-child
+) {
+  color: rgb(101, 120,  41);
+  filter: brightness(1.3);
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none !important;
+}
+
+/* Underline on hover for green expand */
+.box.expand.cstyle.transparent > .box-label:has(
+    strong > span[style="text-decoration: underline;"]:only-child
+):hover {
+  text-decoration: underline !important;
+}
+
+/* BLUE STRIKETHROUGH */
+.qr-strike,
+strong > del:only-child,
+.box.expand.cstyle.transparent > .box-label:has(strong > del:only-child) {
+  color: rgb( 69, 133, 136);
+  filter: brightness(1.3);
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+
+/* Hide the button if the preceding sibling is a code block with the 'verbatim' class */
+strong > span.copy-to-clipboard > code + .inline-copy-to-clipboard-button,
+code.verbatim + .inline-copy-to-clipboard-button {
+  display: none;
+}
+
+/* ALSO: Hide the spacing pseudo-element on the code block
+   when it's verbatim AND is followed by the button */
+strong > span.copy-to-clipboard > code.copy-to-clipboard-code:has(+ .inline-copy-to-clipboard-button)::after,
+code.copy-to-clipboard-code.verbatim:has(+ .inline-copy-to-clipboard-button)::after {
+  display: none;
+  /* OR alternatively, you could set width: 0; */
+  /* width: 0; */
+}
+
+/* eliminate the outer bold */
+strong:has(> code:only-child),
+strong:has(> span.copy-to-clipboard:first-child > code:first-child) {
+  font-weight: inherit;
+}
+
+/* ORANGE CODE */
+.qr-code,
+strong > code:only-child,
+strong > span.copy-to-clipboard > code:first-child,
+.box.expand.cstyle.transparent > .box-label:has(strong > code:only-child),
+.box.expand.cstyle.transparent > .box-label:has(
+    strong > span.copy-to-clipboard > code:first-child
+) {
+  color: rgb(169, 94, 9);
+  filter: brightness(1.3);
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+  border: none;
+  /* white-space: pre-wrap; */
+  white-space: normal;
+  word-break: normal;
+}
+
+/* PURPLE VERBATIM */
+.qr-verbatim,
+strong > code.verbatim:only-child,
+strong > span.copy-to-clipboard > code.verbatim:first-child,
+.box.expand.cstyle.transparent > .box-label:has(strong > code.verbatim:only-child),
+.box.expand.cstyle.transparent > .box-label:has(
+    strong > span.copy-to-clipboard > code.verbatim:first-child
+) {
+  color: rgb(187, 125, 129);
+  filter: brightness(1.1);
+}
+
+/* strong { */
+/*   font-weight: bold; !important; */
+/* } */
+
+
+.qr-white,
+div.qr-white > :is(h1, h2, h3, h4, h5, h6),
+code:has(+ strong > strong),
+code.verbatim:has(+ strong > strong) {
+    /* color: rgb(244, 170, 43); */
+    /* color: rgb(187, 128, 24); */
+    color: rgb(235, 194, 149);
+}
+
+.qr-red,
+div.qr-red > :is(h1, h2, h3, h4, h5, h6),
+code:has(+ strong > em),
+code:has(+ strong > em) {
+    color: rgb(195, 58, 43);
+}
+
+.qr-green,
+div.qr-green > :is(h1, h2, h3, h4, h5, h6),
+code:has(+ strong > span[style="text-decoration: underline;"]),
+code.verbatim:has(+ strong > span[style="text-decoration: underline;"]) {
+    color: rgb(136, 155, 74);
+}
+
+.qr-blue,
+div.qr-blue > :is(h1, h2, h3, h4, h5, h6),
+code:has(+ strong > del),
+code.verbatim:has(+ strong > del) {
+    color: rgb(131, 165, 152);
+}
+
+.qr-orange,
+div.qr-orange > :is(h1, h2, h3, h4, h5, h6),
+code:has(+ strong > code),
+code.verbatim:has(+ strong > code) {
+    color: rgb(228, 130, 18);
+}
+
+.qr-grey,
+div.qr-grey > :is(h1, h2, h3, h4, h5, h6),
+code:has(+ strong > code.verbatim),
+code.verbatim:has(+ strong > code.verbatim) {
+    color: rgb(187, 125, 129);
+}

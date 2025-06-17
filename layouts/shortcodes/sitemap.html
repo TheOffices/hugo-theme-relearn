@@ -1,0 +1,53 @@
+{{- define "sitemap-section" -}}
+  {{- $section := .Section -}}
+
+  {{/* Determine if the section or any of its ancestors are excluded */}}
+  {{- $isSectionItselfExcluded := $section.Params.sitemap_exclude -}}
+  {{- $isAncestorExcluded := false -}}
+  {{- if $section.Ancestors -}}
+    {{- range $section.Ancestors -}}
+      {{- if .Params.sitemap_exclude -}}
+        {{- $isAncestorExcluded = true -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $excluded := or $isSectionItselfExcluded $isAncestorExcluded -}}
+
+  {{- if not $excluded -}}
+    <li>
+      {{/* Link to the current section itself (e.g., from its _index.md) */}}
+      <a href="{{ $section.RelPermalink }}">{{ $section.Title }}</a>
+
+      {{/* List REGULAR pages within the current section, sorted by title */}}
+      {{/* Filter out pages that are actually section definitions (Kind "section")
+           as they will be handled by the $section.Sections loop. */}}
+      {{- $regularPages := where $section.Pages "Kind" "page" -}}
+      {{- $pagesToList := where $regularPages "Params.sitemap_exclude" "!=" true -}}
+      {{- if gt (len $pagesToList) 0 -}}
+        <ul>
+          {{- range $pagesToList.ByTitle -}}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{- end -}}
+        </ul>
+      {{- end -}}
+
+      {{/* List child sections, sorted by title (recursive call) */}}
+      {{/* These are items where Kind is "section" */}}
+      {{- $childSections := $section.Sections -}}
+      {{- if gt (len $childSections) 0 -}}
+        <ul>
+          {{- range $childSections.ByTitle -}}
+            {{- template "sitemap-section" (dict "Section" .) -}}
+          {{- end -}}
+        </ul>
+      {{- end -}}
+    </li>
+  {{- end -}}
+{{- end -}}
+
+{{/* Main entry point for the sitemap shortcode */}}
+<ul>
+  {{- range site.Home.Sections.ByTitle -}}
+    {{- template "sitemap-section" (dict "Section" .) -}}
+  {{- end -}}
+</ul>

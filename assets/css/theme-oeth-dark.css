@@ -1,0 +1,70 @@
+:root {
+  /* zen-dark */
+  --PRIMARY-color: rgba(47, 129, 235, 1); /* brand primary color */
+  --SECONDARY-color: rgba(47, 129, 235, 1); /* brand secondary color */
+
+  --MAIN-TOPBAR-BORDER-color: rgba(71, 71, 71, 1); /* border color between topbar and content */
+  --MAIN-LINK-color: rgb(187, 128, 24); /* hovered link color of content */
+  --MAIN-LINK-HOVER-color: rgb(244, 170, 43); /* hovered link color of content */
+  --MAIN-BG-color: rgb(40, 31, 17); /* background color of content */
+  --MAIN-TEXT-color: rgb(255, 216, 161); /* text color of content and h1 titles */
+  --MAIN-TITLES-TEXT-color: rgba(255, 255, 255, 1); /* text color of h2-h6 titles and transparent box titles */
+
+  --MAIN-TITLES-H2-TEXT-color: rgb(157,  47,  35);
+  --MAIN-TITLES-H3-TEXT-color: rgb(169, 94, 9);
+  --MAIN-TITLES-H4-TEXT-color: rgb(187, 128, 24);
+  --MAIN-TITLES-H5-TEXT-color: rgb(104, 157, 106);
+  --MAIN-TITLES-H6-TEXT-color: rgb(187, 125, 129);
+
+  --CODE-theme: oeth-gruvbox; /* name of the chroma stylesheet file */
+  --CODE-BLOCK-color: rgb(248, 248, 242); /* fallback text color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BG-color: rgb(43, 43, 43); /* fallback background color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BORDER-color: rgba(71, 71, 71, 1); /* border color of block code */
+  --CODE-INLINE-color: rgb(219, 70, 100); /* text color of inline code */
+  --CODE-INLINE-BG-color: rgb(37, 29, 24); /* background color of inline code */
+  --CODE-INLINE-BORDER-color: rgba(71, 71, 71, 1); /* border color of inline code */
+
+  --BROWSER-theme: dark; /* name of the theme for browser scrollbars of the main section */
+  --MERMAID-theme: dark; /* name of the default Mermaid theme for this variant, can be overridden in hugo.toml */
+  --OPENAPI-theme: dark; /* name of the default OpenAPI theme for this variant, can be overridden in hugo.toml */
+  --OPENAPI-CODE-theme: obsidian; /* name of the default OpenAPI code theme for this variant, can be overridden in hugo.toml */
+
+  --MENU-BORDER-color: rgba(71, 71, 71, 1); /* border color between menu and content */
+  --MENU-TOPBAR-BORDER-color: rgba(39, 39, 39, 1); /* separator color of vertical line between menu and topbar */
+  --MENU-TOPBAR-SEPARATOR-color: rgba(71, 71, 71, 1); /* separator color of vertical line between menu and topbar */
+  --MENU-HEADER-BG-color: transparent; /* background color of menu header */
+  --MENU-HEADER-BORDER-color: transparent; /* border color between menu header and menu */
+
+  --MENU-SEARCH-color: rgb(187, 135, 43); /* text and icon color of search box */
+  --MENU-SEARCH-BG-color: rgb(34, 26, 15); /* background color of search box */
+  --MENU-SEARCH-BORDER-color: rgba(71, 71, 71, 0.66); /* border color of search box */
+
+  --MENU-HOME-LINK-color: rgb(222, 199, 176); /* home button color if configured */
+  --MENU-HOME-LINK-HOVER-color: rgb(251, 181, 58); /* hovered home button color if configured */
+  --MENU-HOME-TOP-SEPARATOR-color: rgba(71, 71, 71, 0.66); /* separator color between menu search box and home menu */
+  --MENU-HOME-SEPARATOR-color: rgba(71, 71, 71, 0.66); /* separator color between home menus */
+  --MENU-HOME-BOTTOM-SEPARATOR-color: rgba(71, 71, 71, 0.66); /* separator color between home menu and menu */
+
+  --MENU-SECTIONS-BG-color: rgb(34, 26, 15); /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+  --MENU-SECTIONS-ACTIVE-BG-color: transparent; /* background color of the active menu section */
+  --MENU-SECTIONS-LINK-color: rgb(222, 199, 176); /* link color of menu topics */
+  --MENU-SECTIONS-LINK-HOVER-color: rgb(251, 181, 58); /* hoverd link color of menu topics */
+  --MENU-SECTION-ACTIVE-CATEGORY-color: rgb(222, 199, 176); /* text color of the displayed menu topic */
+  --MENU-SECTION-ACTIVE-CATEGORY-BG-color: rgb(40, 31, 17); /* background color of the displayed menu topic */
+  --MENU-SECTION-SEPARATOR-color: rgba(71, 71, 71, 0.66); /* separator color between menu sections and menu footer */
+
+  --BOX-CAPTION-color: rgb(222, 199, 176); /* text color of colored box titles */
+  --BOX-CAPTION-ALT-color: rgb(61, 48, 40);
+  --BOX-BG-color: rgb(34, 26, 15); /* background color of colored boxes */
+  --BOX-TEXT-color: rgb(255, 216, 161); /* text color of colored box content */
+
+  --BOX-GREY-color: rgba(123, 81, 84, 1); /* background color of grey boxes */
+  --BOX-GREEN-color: rgba(101, 120, 41, 1);
+  --BOX-CYAN-color: rgba(104, 157, 106, 1);
+  --BOX-BLUE-color: rgba(69, 133, 136, 1);
+  --BOX-MAGENTA-color: rgba(169, 43, 67, 1);
+  --BOX-ORANGE-color: rgba(169, 105, 32, 1);
+  --BOX-YELLOW-color: rgba(187, 128, 24);
+  --BOX-RED-color: rgba(157, 47, 35, 1);
+}
+

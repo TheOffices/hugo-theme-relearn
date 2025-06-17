@@ -3,3 +3,6 @@
   console.log("running some javascript");
 </script>
 -->
+
+{{ $js := resources.Get "js/breadcrumb-scroll.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>

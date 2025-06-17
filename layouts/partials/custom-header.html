@@ -18,3 +18,13 @@
     <script src="{{ printf "%s" $filePath | relURL }}{{ $assetBusting }}" defer></script>
   {{- end }}
 {{- end }}
+
+{{ $inlineEmphasis := resources.Get "css/inline-emphasis-color.css" }}
+{{ if $inlineEmphasis }}
+<link rel="stylesheet" href="{{ $inlineEmphasis.Permalink }}">
+{{ end }}
+
+{{ $attrHTML := resources.Get "css/attr-html.css" }}
+{{ if $attrHTML }}
+<link rel="stylesheet" href="{{ $attrHTML.Permalink }}">
+{{ end }}

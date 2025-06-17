@@ -1,0 +1,20 @@
+h1:has(+ div > p.tags),
+h2:has(+ div > p.tags),
+h3:has(+ div > p.tags),
+h4:has(+ div > p.tags),
+h5:has(+ div > p.tags),
+h6:has(+ div > p.tags) {
+    margin-bottom: 0px;
+}
+
+p.tags {
+    margin-top: 0px;
+}
+
+table.mergetable-bottom {
+    margin-bottom: 0px;
+}
+
+table.mergetable-top {
+    margin-top: 0px;
+}
