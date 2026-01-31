@@ -3,49 +3,50 @@
 {{- $Date := "" }}
 {{- $dateFormat := site.Params.dateFormat | default ":date_medium" }}
 {{- with .GitInfo }}
-  {{- with and (not site.Params.hideAuthorName) .AuthorName }}
-    {{- $LastModifierDisplayName = . }}
-  {{- end }}
-  {{- with and (not site.Params.hideAuthorEmail) .AuthorEmail }}
-    {{- $LastModifierEmail = . }}
-  {{- end }}
-  {{- with and (not site.Params.hideAuthorDate) .AuthorDate }}
-    {{- $Date = . | time.Format $dateFormat }}
-  {{- end }}
+{{- with and (not site.Params.hideAuthorName) .AuthorName }}
+{{- $LastModifierDisplayName = . }}
+{{- end }}
+{{- with and (not site.Params.hideAuthorEmail) .AuthorEmail }}
+{{- $LastModifierEmail = . }}
+{{- end }}
+{{- with and (not site.Params.hideAuthorDate) .AuthorDate }}
+{{- $Date = . | time.Format $dateFormat }}
+{{- end }}
 {{- else }}
-  {{- with and (not site.Params.hideAuthorName) .Params.LastModifierDisplayName }}
-    {{- $LastModifierDisplayName = . }}
-  {{- end }}
-  {{- with and (not site.Params.hideAuthorEmail) .Params.LastModifierEmail }}
-    {{- $LastModifierEmail = . }}
-  {{- end }}
-  {{- with and (not site.Params.hideAuthorDate) .Params.Date }}
-    {{- $Date = . | time.Format $dateFormat }}
-  {{- end }}
+{{- with and (not site.Params.hideAuthorName) .Params.LastModifierDisplayName }}
+{{- $LastModifierDisplayName = . }}
+{{- end }}
+{{- with and (not site.Params.hideAuthorEmail) .Params.LastModifierEmail }}
+{{- $LastModifierEmail = . }}
+{{- end }}
+{{- with and (not site.Params.hideAuthorDate) .Params.Date }}
+{{- $Date = . | time.Format $dateFormat }}
+{{- end }}
 {{- end }}
 {{- if $LastModifierDisplayName }}
-              <i class='fa-fw fas fa-user'></i> {{ with $LastModifierEmail }}<a href="mailto:{{ . }}">{{ end }}{{ $LastModifierDisplayName }}{{ with $LastModifierEmail }}</a>{{ end }}
+<i class='fa-fw fas fa-user'></i> {{ with $LastModifierEmail }}<a href="mailto:{{ . }}">{{ end }}{{
+  $LastModifierDisplayName }}{{ with $LastModifierEmail }}</a>{{ end }}
 {{- end }}
 {{- with $Date }}
-              <i class='fa-fw fas fa-calendar'></i> {{ . }}
+<i class='fa-fw fas fa-calendar'></i> {{ . }}
 {{- end }}
 {{- partial "term-list.html" (dict
-  "page" .
-  "taxonomy" "categories"
-  "icon" "layer-group"
+"page" .
+"taxonomy" "categories"
+"icon" "layer-group"
 ) }}
 
 
 <footer>
   <hr>
-  <p>All Contents &copy; {{ now.Format "2006" }} Quillan Dietrich Paige. All rights reserved.</p>
-{{- partial "shortcodes/button.html" (dict
-    "page" .
-    "href" "https://patreon.com/QuillanDeitrichPaige"
-    "style" "grey"
-    "icon" "fa-brands fa-patreon"
-    "content" "Patreon"
-) }}
+  <p>All Contents &copy; {{ now.Format "2006" }} Aldo Zeroun. All rights reserved.</p>
+  {{- partial "shortcodes/button.html" (dict
+  "page" .
+  "href" "https://patreon.com/AldoZeroun"
+  "style" "grey"
+  "icon" "fa-brands fa-patreon"
+  "content" "Patreon"
+  ) }}
   <p>
     <a href="/legal/copyrights">Copyrights</a> -
     <!-- <a href="/contact/licensing">Licensing</a> - -->
