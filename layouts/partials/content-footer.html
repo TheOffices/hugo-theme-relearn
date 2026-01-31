@@ -48,8 +48,11 @@
   "content" "Patreon"
   ) }}
   <p>
-    <a href="/legal/copyrights">Copyrights</a> -
-    <!-- <a href="/contact/licensing">Licensing</a> - -->
-    <a href="/legal/sitemap">Sitemap</a>
+    {{ $basePath := .Site.Params.legalBasePath | default "legal" }}
+    <a href="/{{ $basePath }}/copyrights">Copyrights</a> -
+    {{ if .Site.Params.showLicensingLink }}
+    <a href="/{{ $basePath }}/licensing">Licensing</a> -
+    {{ end }}
+    <a href="/{{ $basePath }}/sitemap">Sitemap</a>
   </p>
 </footer>
