@@ -39,6 +39,11 @@
 
 <footer>
   <hr>
+  {{ with index .Site.Params "semantic-version" }}
+  <p>
+    Website Version: <code class="verbatim highlight">v{{ . }}</code>
+  </p>
+  {{ end }}
   <p>All Contents &copy; 2025 - {{ now.Format "2006" }} Aldo Zeroun. All rights reserved.</p>
   {{- partial "shortcodes/button.html" (dict
   "page" .
